@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mapper namespace="/Test-tian-lib/src/main/java/repository/UserRepository.java">
+		<select id="selectAdminUser" resultType="User">
+			SELECT
+			*
+			FROM
+			AdminUser
+			WHERE
+			user_name=#{userName, jdbcType=VARCHAR}
+			AND
+			password=#{passWord,jdbcType=VARCHAR}
+		</select>
+</mapper>
